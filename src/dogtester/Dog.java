@@ -12,19 +12,11 @@ package dogtester;
  */
 public class Dog {
 //variables for characteristics
-
   private String dogName, dogBreed;
   private int aggression, hunger;
 
   //constructors
-  public Dog() {
-    dogName = "Rufus Doe";
-    dogBreed = "Unknown Breed";
-    aggression = 0;
-    hunger = 0;
-  }
-
-  public Dog(String dgName, String dgBreed, int agg, int hung) {
+  public Dog(String dgName, String dgBreed, int agg, int hung){
     dogName = dgName;
     dogBreed = dgBreed;
     aggression = agg;
@@ -32,14 +24,47 @@ public class Dog {
   }
 
   //Alternate constructor
-  public Dog(String dgName, String dgBreed) {
+  public Dog(String dgName, String dgBreed){
     //This constructor only uses the name and breed
     //Set the aggression and hunger to random #s
 
     dogName = dgName;
     dogBreed = dgBreed;
-    aggression = (int) (Math.random() * 10) + 1;
-    hunger = (int) (Math.random() * 10) + 1;
+    aggression = (int)(Math.random()*10) + 1;
+    hunger = (int)(Math.random()*10) + 1;
+  }
+
+  //Accessor Methods
+  public String getName() {
+    return dogName;
+  }
+
+  public void setName(String dgName){
+    dogName = dgName;
+  }
+
+  public String getBreed() {
+    return dogBreed;
+  }
+
+  public void setBreed(String dgBreed){
+    dogBreed = dgBreed;
+  }
+
+  public int getAggression() {
+    return aggression;
+  }
+
+  public void setAggression(int dogAgg){
+    aggression = dogAgg;
+  }
+
+  public int getHunger() {
+    return hunger;
+  }
+
+  public void setHunger(int dogHung){
+    hunger = dogHung;
   }
 
   public void barkFriendly() {
